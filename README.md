@@ -6,7 +6,7 @@ Este es un repositorio que contiene mi portfolio, donde podrás ver algunos de l
 
 ## Acceso al Portafolio
 
-Podes visitar mi portafolio en línea aquí: [Portafolio de [Gino Lanese](https://ginolanese.github.io/portfolio/)
+Acceso a mi portfolio en linea: https://ginolanese.github.io/portfolio/
 
 Tuve un problema que no logré solucionar sobre la fuente de letras al subir la pagina a github pages.
 
