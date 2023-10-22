@@ -1,12 +1,14 @@
-# Portafolio de [Gino Lanese]
+# Portfolio de Gino Lanese para BA Multiplica.
 
-¡Bienvenido a mi portafolio!
+¡Bienvenido a mi portfolio!
 
-Este es un repositorio que contiene mi portafolio, donde podrás ver algunos de los proyectos en los que he trabajado (proximamente en el sprint #3) y obtener más información sobre mi experiencia y habilidades.
+Este es un repositorio que contiene mi portfolio, donde podrás ver algunos de los proyectos en los que he trabajado (proximamente en el sprint #3) y obtener más información sobre mi experiencia y habilidades.
 
 ## Acceso al Portafolio
 
-Puedes visitar mi portafolio en línea aquí: [Portafolio de [Gino Lanese](https://ginolanese.github.io/portfolio/)
+Podes visitar mi portafolio en línea aquí: [Portafolio de [Gino Lanese](https://ginolanese.github.io/portfolio/)
+
+Tuve un problema que no logré solucionar sobre la fuente de letras al subir la pagina a github pages.
 
 
 
