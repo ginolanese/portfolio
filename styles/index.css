@@ -1,35 +1,40 @@
 
-*{
+/* Estilos globales para todos los elementos */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Public Sans', sans-serif;
-  font-family: 'Sora', sans-serif;
-
+  font-family: 'Public Sans', sans-serif; /* Selecciona la fuente 'Public Sans' como primera opción */
+  font-family: 'Sora', sans-serif; /* Sobrescribe la fuente con 'Sora' como segunda opción */
 }
 
-html{
+/* Estilos para el elemento html */
+html {
   font-size: 20px;
   scroll-behavior: auto;
 }
 
+/* Media query para reducción de movimiento */
 @media (prefers-reduced-motion: reduce) {
+  /* Puedes agregar estilos específicos para reducción de movimiento aquí */
 }
 
-body{
+/* Estilos para el cuerpo del documento */
+body {
   font-size: 1rem;
   background-color: #01010E;
-  font-family: 'OPTIVenus-BoldExtended';
+  font-family: 'OPTIVenus-BoldExtended'; /* Fuente para el cuerpo del documento */
   background-position: center;
   scroll-behavior: auto;
 }
 
-
-.container{
+/* Estilos para el contenedor */
+.container {
   display: flex;
   flex-direction: column;
 }
 
+/* Estilos para el menú de navegación */
 .menu {
   display: flex;
   align-items: center;
@@ -42,14 +47,14 @@ body{
   margin-right: 100px;
 }
 
+/* Estilos para la logo en el menú */
 .logo {
   font-size: 24px;
   color: #1E047D;
   text-transform: uppercase;
-  font-size: 10px;
 }
 
-
+/* Estilos para los elementos del menú de navegación */
 .menu .navbar ul li {
   position: relative;
   float: left;
@@ -68,393 +73,440 @@ body{
   color: #250793;
 }
 
+/* Estilos para el elemento con id 'menu' */
 #menu {
   display: none;
 }
-  .row {
-      display: flex;
-      height: 88%;
-      align-items: center;
-      
+
+/* Estilos para la clase 'row' */
+.row {
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+
+/* Estilos para la clase 'col' */
+.col {
+  color: aliceblue;
+  top: 50px;
+  margin-top: 13%;
+  margin-left: 6.2%;
+  font-size: 17px;
+}
+
+/* Estilos para el elemento con clase 'saludos' dentro de 'col' */
+.col .saludos {
+  color: #7860d8;
+  text-align: center;
+  position: relative;
+  top: -9px; 
+  left: 0px;
+  font-size: 12px;
+  border-radius: 10px; 
+  padding: 6px; 
+  background-color: rgba(3, 42, 77, 0.5);
+  max-width: 120px;
+}
+
+
+/* Estilos para el pseudo-elemento '::before' de la clase 'saludos' dentro de 'col' */
+.col .saludos::before {
+  content: "👋🏼"; 
+  font-size: 17px; 
+  margin-right: 0px; 
+}
+
+/* Estilos para la clase 'student' dentro de 'col' */
+.col .student {
+  color: rgba(132, 156, 177, 0.795);
+  position: relative;
+  font-size: 10px;
+  text-decoration: none;
+  top: 20px;
+}
+
+/* Estilos para la clase 'social' */
+.social {
+  width: fit-content;
+  height: fit-content;
+  background-color: #01010E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 117px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* Estilos para la clase 'socialContainer' */
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgba(132, 156, 177, 0.795);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+/* Estilos para la animación al hacer hover en 'containerOne' */
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+
+/* Estilos para la animación al hacer hover en 'containerTwo' */
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+
+/* Estilos para la animación al hacer hover en 'containerThree' */
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+
+/* Estilos para la animación al hacer hover en 'containerFour' */
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+/* Estilos para 'socialContainer' al hacer clic */
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+/* Estilos para las imágenes SVG en 'socialContainer' */
+.socialSvg {
+  width: 12px;
+}
+
+/* Estilos para el path dentro de las imágenes SVG en 'socialSvg' */
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+/* Estilos para 'socialSvg' al hacer hover en 'socialContainer' */
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+/* Animación para 'slide-in-top' */
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
   }
 
-  .col {
-      color: aliceblue;
-      top: 50px;
-      margin-top: 13%;
-      margin-left: 6.2%;
-      font-size: 17px;
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
+}
 
-  .col .saludos {
-      color: #7860d8;
-      text-align: center;
-      position: relative;
-      top: -9px; 
-      left: 0px;
-      font-size: 12px;
-      border-radius: 10px; 
-      padding: 6px; 
-      background-color: rgba(3, 42, 77, 0.5);
-      max-width: 120px;
+    
+   /* Estilos para el botón '.button' */
+.button {
+  font-family: OPTIVenus-BoldExtended;
+  font-size: 14px;
+  text-align: center;
+  --main-focus: #2d8cf0;
+  --font-color: #e9e7e7;
+  --bg-color-sub: #7860d8;
+  --bg-color: #7860d8;
+  --main-color: #200166;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 85%;
+  margin-top: -13%;
+}
+
+/* Estilos para las transiciones en '.button', '.button__icon' y '.button__text' */
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+/* Estilos para el texto dentro del botón '.button' */
+.button .button__text {
+  transform: translateX(22px);
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+/* Estilos para el icono dentro del botón '.button' */
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para el ícono SVG dentro del botón '.button' */
+.button .svg {
+  width: 20px;
+  fill: var(--main-color);
+}
+
+/* Estilos al hacer hover en el botón '.button' */
+.button:hover {
+  background: var(--bg-color);
+}
+
+/* Estilos al hacer hover en el texto dentro del botón '.button' */
+.button:hover .button__text {
+  color: transparent;
+}
+
+/* Estilos al hacer hover en el icono dentro del botón '.button' */
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+/* Estilos al hacer clic en el botón '.button' */
+.button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+}
+
+/* Estilos para el botón '.contactButton' */
+.contactButton {
+  font-family: OPTIVenus-BoldExtended;
+  font-size: 15px;
+  background: #7860d8;
+  color: white;
+  padding-left: 1.0em;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #7860d8;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3em;
+  margin-left: 85%;
+  margin-top: 1%;
+}
+
+    
+/* Estilos para el botón '.iconButton' */
+.iconButton {
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #5c0eb475;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+/* Estilos al hacer hover en el botón '.contactButton' */
+.contactButton:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em #5566c2;
+}
+
+/* Estilos al hacer clic en el botón '.contactButton' */
+.contactButton:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em #5566c2;
+}
+
+/* Estilos para la imagen de fondo en la sección '.home-image' */
+.home-image {
+  z-index: -1;
+}
+
+/* Estilos para la posición y tamaño de la imagen en '.img-box' */
+.img-box {
+  margin-top: -9%;
+  margin-left: 36%;
+}
+
+/* Estilos para la imagen dentro de '.img-box' */
+.img-box img {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Estilos para el divisor '.divisor' */
+.divisor {
+  margin-top: 8%;
+  border-color: #010414;
+  border-width: 0.2px;      
+}
+
+/* Estilos para la sección de skills '.experiencias' */
+.experiencias {
+  color: #7860d8;
+  text-align: center;
+  position: relative;
+  top: 50px; 
+  left: 46%;
+  font-size: 12px;
+  border-radius: 10px; 
+  padding: 6px; 
+  background-color: rgba(3, 42, 77, 0.5);
+  max-width: 120px;
+}
+
+/* Estilos para el emoji en '.experiencias' */
+.experiencias::before {
+  content: "👨🏻‍💻"; 
+  font-size: 17px; 
+  margin-right: 0px; 
+}
+
+/* Estilos para la sección de skills '.skills-container' */
+.skills-container {
+  background-color: #01010E; 
+  text-align: center; 
+  padding: 4%;
+}
+
+/* Estilos para el título de skills '.skills-title h2' */
+.skills-title h2 {
+  font-size: 32px; 
+  color: #e7e2e2; 
+  margin-bottom: -100%; 
+}
+
+/* Estilos para las barras de habilidades '.skill-bars' */
+.skill-bars {
+  padding: 25px 30px;
+  width: 80%;
+  margin-left: 10%;
+  background: #01010E;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin-top: 1%;
+}
+
+/* Estilos para las barras individuales de habilidades '.bar' */
+.skill-bars .bar {
+  margin: 20px 0;
+}
+
+/* Estilos para la información en '.bar .info span' */
+.skill-bars .bar .info span {
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+  color: #d9d8e4d8;
+}
+
+/* Animación para mostrar la información en '.bar .info span' */
+@keyframes showText {
+  100% {
+    opacity: 1;
   }
+}
 
-  .col .saludos::before {
-      content: "👋🏼"; 
-      font-size: 17px; 
-      margin-right: 0px; 
+/* Estilos para la línea de progreso '.bar .progress-line' */
+.skill-bars .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(70, 17, 17, 0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+/* Animación para la línea de progreso '.bar .progress-line span' */
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
   }
+}
 
-  .col .student{
-      color: rgba(132, 156, 177, 0.795);
-      position: relative;
-      font-size: 10px;
-      text-decoration: none;
-      top: 20px;
+/* Estilos para las barras individuales de habilidades '.bar .progress-line span' */
+.skill-bars .bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
 
-  }
+/* Estilos específicos para cada habilidad '.bar .progress-line.[skill] span' */
+.skill-bars .bar .progress-line.html span {
+  width: 40%;
+}
+.skill-bars .bar .progress-line.css span {
+  width: 50%;
+}
+.skill-bars .bar .progress-line.javascript span {
+  width: 30%;
+}
+.skill-bars .bar .progress-line.python span {
+  width: 25%;
+}
+.skill-bars .bar .progress-line.mysql span {
+  width: 19%;
+}
 
-  .social {
-      width: fit-content;
-      height: fit-content;
-      background-color: #01010E;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 117px;
-      gap: 20px;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
-    }
-    
-    .socialContainer {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background-color: rgba(132, 156, 177, 0.795);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      transition-duration: .3s;
-    }
-    /* instagram*/
-    .containerOne:hover {
-      background-color: #d62976;
-      transition-duration: .3s;
-    }
-    /* twitter*/
-    .containerTwo:hover {
-      background-color: #00acee;
-      transition-duration: .3s;
-    }
-    /* linkdin*/
-    .containerThree:hover {
-      background-color: #0072b1;
-      transition-duration: .3s;
-    }
-    /* Whatsapp*/
-    .containerFour:hover {
-      background-color: #128C7E;
-      transition-duration: .3s;
-    }
-    
-    .socialContainer:active {
-      transform: scale(0.9);
-      transition-duration: .3s;
-    }
-    
-    .socialSvg {
-      width: 12px;
-    }
-    
-    .socialSvg path {
-      fill: rgb(255, 255, 255);
-    }
-    
-    .socialContainer:hover .socialSvg {
-      animation: slide-in-top 0.3s both;
-    }
-    
-    @keyframes slide-in-top {
-      0% {
-        transform: translateY(-50px);
-        opacity: 0;
-      }
-    
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-    
-    .button {
-      font-family: OPTIVenus-BoldExtended;
-      font-size: 14px;
-      text-align: center;
-      --main-focus: #2d8cf0;
-      --font-color: #e9e7e7;
-      --bg-color-sub: #7860d8;
-      --bg-color: #7860d8;
-      --main-color: #200166;
-      position: relative;
-      width: 150px;
-      height: 40px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      border: 2px solid var(--main-color);
-      box-shadow: 4px 4px var(--main-color);
-      background-color: var(--bg-color);
-      border-radius: 10px;
-      overflow: hidden;
-      margin-left: 85%;
-      margin-top: -13%;
-    }
-    
-    .button, .button__icon, .button__text {
-      transition: all 0.3s;
-    }
-    
-    .button .button__text {
-      transform: translateX(22px);
-      color: var(--font-color);
-      font-weight: 600;
-    }
-    
-    .button .button__icon {
-      position: absolute;
-      transform: translateX(109px);
-      height: 100%;
-      width: 39px;
-      background-color: var(--bg-color-sub);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .button .svg {
-      width: 20px;
-      fill: var(--main-color);
-    }
-    
-    .button:hover {
-      background: var(--bg-color);
-    }
-    
-    .button:hover .button__text {
-      color: transparent;
-    }
-    
-    .button:hover .button__icon {
-      width: 148px;
-      transform: translateX(0);
-    }
-    
-    .button:active {
-      transform: translate(3px, 3px);
-      box-shadow: 0px 0px var(--main-color);
-    }
+/* Estilos adicionales para la línea de progreso '.progress-line span' */
+.progress-line span::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
 
-    .contactButton {
-      font-family: OPTIVenus-BoldExtended;
-      font-size: 15px;
-      background: #7860d8;
-      color: white;
-      padding-left: 1.0em;
-      font-weight: 500;
-      border-radius: 0.9em;
-      border: none;
-      letter-spacing: 0.05em;
-      display: flex;
-      align-items: center;
-      box-shadow: inset 0 0 1.6em -0.6em #7860d8;;
-      overflow: hidden;
-      position: relative;
-      height: 2.8em;
-      padding-right: 3em;
-      margin-left: 85%;
-      margin-top: 1%;
-    }
-    
-    .iconButton {
-      margin-left: 1em;
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 2.2em;
-      width: 2.2em;
-      border-radius: 0.7em;
-      box-shadow: 0.1em 0.1em 0.6em 0.2em #5c0eb475;
-      right: 0.3em;
-      transition: all 0.3s;
-    }
-    
-    .contactButton:hover {
-      transform: translate(-0.05em, -0.05em);
-      box-shadow: 0.15em 0.15em #5566c2;
-    }
-    
-    .contactButton:active {
-      transform: translate(0.05em, 0.05em);
-      box-shadow: 0.05em 0.05em #5566c2;
-    }
-
-    .home-image{
-      z-index: -1;
-      
-    }
-
-    .img-box{
-      position: relative;
-      margin-top: -12%;
-      margin-left: 36%;
-    }
-
-    .img-box img{
-      width: 100%;
-      max-width: 500px;
-    }
-
-
-    .divisor{
-      margin-top: 8%;
-      border-color: #010414;
-      border-width: 0.2px;      
-    }
-
-      /* SECCION DE SKILLS */
-
-      .experiencias {
-        color: #7860d8;
-        text-align: center;
-        position: relative;
-        top: 50px; 
-        left: 46%;
-        font-size: 12px;
-        border-radius: 10px; 
-        padding: 6px; 
-        background-color: rgba(3, 42, 77, 0.5);
-        max-width: 120px;
-    }
-
-    .experiencias::before {
-        content: "👨🏻‍💻"; 
-        font-size: 17px; 
-        margin-right: 0px; 
-    }
-
-      .skills-container {
-        background-color: #01010E; 
-        text-align: center; 
-        padding: 4%;
-      }
-
-      .skills-title h2 {
-        font-size: 32px; 
-        color: #e7e2e2; 
-        margin-bottom: -100%; 
-      }
-
-
-      .skill-bars{
-        padding: 25px 30px;
-        width: 80%;
-        margin-left: 10%;
-        background: #01010E;
-        box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
-        border-radius: 10px;
-        margin-top: 1%;
-      }
-      .skill-bars .bar{
-        margin: 20px 0;
-      }
-      .skill-bars .bar:first-child{
-        margin-top: 0px;
-      }
-      .skill-bars .bar .info{
-        margin-bottom: 5px;
-      }
-      .skill-bars .bar .info span{
-        font-weight: 500;
-        font-size: 17px;
-        opacity: 0;
-        animation: showText 0.5s 1s linear forwards;
-        color: #d9d8e4d8;
-      }
-      @keyframes showText {
-        100%{
-          opacity: 1;
-        }
-      }
-      .skill-bars .bar .progress-line{
-        height: 10px;
-        width: 100%;
-        background: #f0f0f0;
-        position: relative;
-        transform: scaleX(0);
-        transform-origin: left;
-        border-radius: 10px;
-        box-shadow: inset 0 1px 1px rgba(70, 17, 17, 0.05),
-                    0 1px rgba(255,255,255,0.8);
-        animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
-      }
-      @keyframes animate {
-        100%{
-          transform: scaleX(1);
-        }
-      }
-      .bar .progress-line span{
-        height: 100%;
-        position: absolute;
-        border-radius: 10px;
-        transform: scaleX(0);
-        transform-origin: left;
-        background: #6665ee;
-        animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
-      }
-      .bar .progress-line.html span{
-        width: 40%;
-      }
-      .bar .progress-line.css span{
-        width: 50%;
-      }
-      .bar .progress-line.javascript span{
-        width: 30%;
-      }
-      .bar .progress-line.python span{
-        width: 25%;
-      }
-      .bar .progress-line.mysql span{
-        width: 19%;
-      }
-      .progress-line span::before{
-        position: absolute;
-        content: "";
-        top: -10px;
-        right: 0;
-        height: 0;
-        width: 0;
-        border: 7px solid transparent;
-        border-bottom-width: 0px;
-        border-right-width: 0px;
-        border-top-color: #000;
-        opacity: 0;
-        animation: showText2 0.5s 1.5s linear forwards;
-      }
-      .progress-line span::after{
-        position: absolute;
-        top: -28px;
-        right: 0;
-        font-weight: 500;
-        background: #000;
-        color: #fff;
-        padding: 1px 8px;
-        font-size: 12px;
-        border-radius: 3px;
-        opacity: 0;
-        animation: showText2 0.5s 1.5s linear forwards;
-      }
+/* Animación para mostrar el contenido adicional en '.progress-line span' */
       @keyframes showText2 {
         100%{
           opacity: 1;
@@ -847,12 +899,19 @@ margin-right: 5%;
 margin-top: 5%; 
 }
 
+.made{
+  color: #2f03d1;
+  font-size: 15px;
+  margin-right: 65%;
+
+}
+
 .scroll-to-top-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: #3416af;
-  color: #b63535;
+  color: #6709e2;
   font-size: 20px;
   padding: 10px;
   border-radius: 40%;
