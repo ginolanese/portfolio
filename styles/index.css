@@ -16,35 +16,25 @@ html {
 
 /* Media query para reducción de movimiento */
 @media (prefers-reduced-motion: reduce) {
-  /* Puedes agregar estilos específicos para reducción de movimiento aquí */
 }
 
 /* Estilos para el cuerpo del documento */
 body {
   font-size: 1rem;
   background-color: #01010E;
-  font-family: 'OPTIVenus-BoldExtended'; /* Fuente para el cuerpo del documento */
-  background-position: center;
-  scroll-behavior: auto;
 }
 
-/* Estilos para el contenedor */
-.container {
-  display: flex;
-  flex-direction: column;
-}
 
 /* Estilos para el menú de navegación */
 .menu {
   display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 1000;
+
+  justify-content: space-between;
   background-color: #0A0229;
   border-radius: 15px;
-  margin-top: 10px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: 10px 5% 0;
+  padding: 10px 0;
 }
 
 /* Estilos para la logo en el menú */
@@ -54,10 +44,21 @@ body {
   text-transform: uppercase;
 }
 
-/* Estilos para los elementos del menú de navegación */
+@media only screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.menu .navbar ul {
+  width: 100%;
+  text-align: center;
+}
+
 .menu .navbar ul li {
-  position: relative;
-  float: left;
+  display: inline;
+  margin-bottom: 10px;
 }
 
 .menu .navbar ul li a {
@@ -67,6 +68,8 @@ body {
   font-size: 12px;
   position: relative;
   float: left;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .menu .navbar ul li a:hover {
@@ -80,9 +83,7 @@ body {
 
 /* Estilos para la clase 'row' */
 .row {
-  display: flex;
   height: 88%;
-  align-items: center;
 }
 
 /* Estilos para la clase 'col' */
@@ -98,7 +99,6 @@ body {
 .col .saludos {
   color: #7860d8;
   text-align: center;
-  position: relative;
   top: -9px; 
   left: 0px;
   font-size: 12px;
@@ -351,7 +351,7 @@ body {
 /* Estilos para la imagen dentro de '.img-box' */
 .img-box img {
   width: 100%;
-  max-width: 500px;
+  max-width: 500px; 
 }
 
 /* Estilos para el divisor '.divisor' */
@@ -528,20 +528,21 @@ body {
         content: "19%";
       }
 
-
-      .sobre-mi {
-        color: #7860d8;
-        text-align: center;
-        position: relative;
-        top: -9px; 
-        left: 0px;
-        font-size: 12px;
-        border-radius: 10px; 
-        padding: 6px; 
-        background-color: rgba(3, 42, 77, 0.5);
-        max-width: 120px;
-        margin-left: 50%;
-    }
+  @media only screen and (min-width: 768px) {
+/* Estilos para la sección "Sobre Mí" */
+.sobre-mi {
+  color: #7860d8;
+  text-align: center;
+  position: relative;
+  top: -9px; 
+  left: 56px;
+  font-size: 12px;
+  border-radius: 10px; 
+  padding: 6px;  
+  background-color: rgba(3, 42, 77, 0.5);
+  max-width: 120px;
+  margin: 0 auto; 
+}
 
     .sobre-mi::before {
         content: "🙍🏻"; 
@@ -578,8 +579,8 @@ color: #0072b1;
 }
 
 .me-image{
-width: 500px; 
-height: 500px; 
+max-width: 500px; 
+max-height: 500px; 
 border-radius: 100%; 
 object-fit: cover; 
 box-shadow: 100px 0px 20px rgba(0, 0, 0, 0.3); 
@@ -591,7 +592,7 @@ margin-top: -24%;
 .me-box{
 margin-top: -0%;
 }
-
+      }
 /* Seccion Portfolio */
 
 .portfolio-indice {
