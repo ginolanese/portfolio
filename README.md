@@ -21,9 +21,9 @@ Conéctate conmigo en las redes sociales:
 
 En esta sección, puedes ver una barra que representa mis habilidades en diferentes lenguajes de programación y tecnologías. A continuación se muestra una lista de algunas de las habilidades que poseo:
 
-- HTML/CSS
+- HTML
+- CSS
 - JavaScript
-- Python
 - Python
 - MySQL
 
